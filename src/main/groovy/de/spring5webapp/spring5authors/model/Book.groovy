@@ -1,7 +1,10 @@
 package de.spring5webapp.spring5authors.model
 
+import groovy.transform.EqualsAndHashCode
+
 import javax.persistence.*
 
+@EqualsAndHashCode
 @Entity
 class Book {
 
