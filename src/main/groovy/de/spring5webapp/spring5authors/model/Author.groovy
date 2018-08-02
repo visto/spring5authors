@@ -1,11 +1,13 @@
 package de.spring5webapp.spring5authors.model
 
 import groovy.transform.EqualsAndHashCode
+import groovy.transform.ToString
 
 import javax.persistence.*
 
-@EqualsAndHashCode
 @Entity
+@EqualsAndHashCode(includes = 'id')
+@ToString(includes = 'id')
 public class Author {
 
     @Id
@@ -15,7 +17,5 @@ public class Author {
     private String lastName
 
     @ManyToMany(mappedBy = "authors")
-    private Set<Book> books = new HashSet<>()
-
-
+    Set<Book> books = new HashSet<>()
 }
