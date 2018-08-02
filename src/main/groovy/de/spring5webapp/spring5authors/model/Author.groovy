@@ -12,9 +12,9 @@ public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id
-    private String firstName
-    private String lastName
+    Long id
+    String firstName
+    String lastName
 
     @ManyToMany(mappedBy = "authors")
     Set<Book> books = new HashSet<>()
